@@ -47,6 +47,34 @@ class Partner extends Model
 
 
 
+    public function scopeIsPublished($query)
+    {
+        return $query
+            ->whereNotNull('published')
+            ->where('published', true)
+        ;
+    }
+
+    /**
+     * Lists articles for the front end
+     * @param  array $options Display options
+     * @return self
+     */
+    public function scopeGetCategory($query, $category)
+    {
+        if (is_null($category))
+            return;
+        $query
+            ->isPublished()
+            ->with(['logo_bw', 'logo_color'])
+            ->whereHas('category', function($q) use ($category) {
+                $q->where('slug', '=', $category);
+            })
+        ;
+
+        return $query->get();
+    }
+
     // public function beforeValidate()
     // {
     //     // Generate a URL slug for this model
