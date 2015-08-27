@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: abnmt.theaterpartners::lang.post.title
+        searchable: true
+
+    category:
+        label: abnmt.theaterpartners::lang.post.category
+        relation: category
+        select: name
+        searchable: true
+        sortable: false
+    published:
+        label: abnmt.theaterpartners::lang.post.published
+        type: switch

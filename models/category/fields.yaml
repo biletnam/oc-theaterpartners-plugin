@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: abnmt.theaterpartners::lang.category.name
+        placeholder: abnmt.theaterpartners::lang.category.name_placeholder
+        span: left
+
+    slug:
+        label: abnmt.theaterpartners::lang.category.slug
+        span: right
+        placeholder: abnmt.theaterpartners::lang.category.slug_placeholder
+        preset: name

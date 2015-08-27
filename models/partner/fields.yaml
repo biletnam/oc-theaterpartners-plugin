@@ -1,0 +1,45 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: abnmt.theaterpartners::lang.partner.title
+        span: left
+        placeholder: abnmt.theaterpartners::lang.partner.title_placeholder
+    slug:
+        label: abnmt.theaterpartners::lang.partner.slug
+        span: right
+        placeholder: abnmt.theaterpartners::lang.partner.slug_placeholder
+        preset:
+            field: title
+            type: slug
+
+    category:
+        type: relation
+        commentAbove: abnmt.theatepartners::lang.post.category_comment
+        placeholder: abnmt.theatepartners::lang.post.category_placeholder
+
+    cover:
+        tab: abnmt.theaterpartners::lang.partner.tab_manage
+        label: abnmt.theaterpartners::lang.partner.cover
+        type: fileupload
+        mode: image
+        imageWidth: 300
+        imageHeight: 200
+
+    logo_color:
+        tab: abnmt.theaterpartners::lang.partner.tab_manage
+        label: abnmt.theaterpartners::lang.partner.logo_color
+        type: fileupload
+        mode: image
+        # imageWidth: 300
+        imageHeight: 50
+
+    logo_bw:
+        tab: abnmt.theaterpartners::lang.partner.tab_manage
+        label: abnmt.theaterpartners::lang.partner.logo_bw
+        type: fileupload
+        mode: image
+        # imageWidth: 300
+        imageHeight: 50

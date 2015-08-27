@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: abnmt.theaterpartners::lang.category.label
+
+# Model Form Field configuration
+form: $/abnmt/theaterpartners/models/category/fields.yaml
+
+# Model Class name
+modelClass: Abnmt\TheaterPartners\Models\Category
+
+# Default redirect location
+defaultRedirect: abnmt/theaterpartners/categories
+
+# Create page
+create:
+    title: abnmt.theaterpartners::lang.category.create_title
+    redirect: abnmt/theaterpartners/categories/update/:id
+    redirectClose: abnmt/theaterpartners/categories
+
+# Update page
+update:
+    title: abnmt.theaterpartners::lang.category.update_title
+    redirect: abnmt/theaterpartners/categories
+    redirectClose: abnmt/theaterpartners/categories
+
+# Preview page
+preview:
+    title: abnmt.theaterpartners::lang.category.preview_title

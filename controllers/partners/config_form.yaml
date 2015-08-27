@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: abnmt.theaterpartners::lang.partner.label
+
+# Model Form Field configuration
+form: $/abnmt/theaterpartners/models/partner/fields.yaml
+
+# Model Class name
+modelClass: Abnmt\TheaterPartners\Models\Partner
+
+# Default redirect location
+defaultRedirect: abnmt/theaterpartners/partners
+
+# Create page
+create:
+    title: abnmt.theaterpartners::lang.partner.create_title
+    redirect: abnmt/theaterpartners/partners/update/:id
+    redirectClose: abnmt/theaterpartners/partners
+
+# Update page
+update:
+    title: abnmt.theaterpartners::lang.partner.update_title
+    redirect: abnmt/theaterpartners/partners
+    redirectClose: abnmt/theaterpartners/partners
+
+# Preview page
+preview:
+    title: abnmt.theaterpartners::lang.partner.preview_title

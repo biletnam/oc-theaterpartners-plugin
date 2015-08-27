@@ -1,0 +1,12 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: abnmt.theaterpartners::lang.category.name
+        searchable: true
+
+    partner_count:
+        label: abnmt.theaterpartners::lang.category.partners
+        sortable: false
