@@ -17,8 +17,8 @@ fields:
 
     category:
         type: relation
-        commentAbove: abnmt.theatepartners::lang.post.category_comment
-        placeholder: abnmt.theatepartners::lang.post.category_placeholder
+        commentAbove: abnmt.theaterpartners::lang.post.category_comment
+        placeholder: abnmt.theaterpartners::lang.post.category_placeholder
 
     cover:
         tab: abnmt.theaterpartners::lang.partner.tab_manage
