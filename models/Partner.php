@@ -24,6 +24,12 @@ class Partner extends Model
      */
     protected $fillable = [];
 
+
+    /**
+     * @var array JSONable fields
+     */
+    protected $jsonable = ['meta'];
+
     /**
      * @var array Relations
      */

@@ -21,6 +21,8 @@ class CreatePartnersTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->integer('sort_order')->nullable();
 
+            $table->json('meta')->nullable()->default(null);
+
             $table->boolean('published')->default(false);
 
             $table->timestamps();

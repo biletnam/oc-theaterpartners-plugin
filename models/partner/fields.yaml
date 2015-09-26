@@ -15,6 +15,11 @@ fields:
             field: title
             type: slug
 
+
+    link:
+        label: abnmt.theaterpartners::lang.partner.link
+        placeholder: abnmt.theaterpartners::lang.partner.link_placeholder
+
     category:
         type: relation
         commentAbove: abnmt.theaterpartners::lang.post.category_comment
@@ -25,6 +30,7 @@ fields:
         label: abnmt.theaterpartners::lang.partner.cover
         type: fileupload
         mode: image
+        span: left
         imageWidth: 300
         imageHeight: 200
 
@@ -34,7 +40,8 @@ fields:
         type: fileupload
         mode: image
         # imageWidth: 300
-        imageHeight: 50
+        # imageHeight: 50
+        span: right
 
     logo_bw:
         tab: abnmt.theaterpartners::lang.partner.tab_manage
@@ -42,4 +49,14 @@ fields:
         type: fileupload
         mode: image
         # imageWidth: 300
-        imageHeight: 50
+        # imageHeight: 50
+        span: right
+
+    meta[width]:
+        label: abnmt.theaterpartners::lang.partner.meta_width
+        placeholder: abnmt.theaterpartners::lang.partner.meta_width_placeholder
+        span: right
+    meta[height]:
+        label: abnmt.theaterpartners::lang.partner.meta_height
+        placeholder: abnmt.theaterpartners::lang.partner.meta_height_placeholder
+        span: right

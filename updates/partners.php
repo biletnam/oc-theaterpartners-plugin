@@ -8,13 +8,15 @@ return [
         "slug"         => "petersburg",
         "category"     => "Спонсоры",
         "link"         => "http://peterburg2.ru/",
+        "meta"         => ['width' => '115', 'height' => '40'],
         "published"    => 1,
     ],
     [
         "title"        => "Эксперимент",
         "slug"         => "eksperiment",
         "category"     => "Спонсоры",
-        "link"         => "",
+        "link"         => "http://md-eksperiment.org/",
+        "meta"         => ['width' => '78', 'height' => '47'],
         "published"    => 1,
     ],
     [
@@ -22,6 +24,7 @@ return [
         "slug"         => "konkretno",
         "category"     => "Спонсоры",
         "link"         => "http://konkretno.ru/",
+        "meta"         => ['width' => '132', 'height' => '29'],
         "published"    => 1,
     ],
     [
@@ -29,6 +32,7 @@ return [
         "slug"         => "zerkalo",
         "category"     => "Спонсоры",
         "link"         => "http://www.zerkalospb.ru/",
+        "meta"         => ['width' => '81', 'height' => '36'],
         "published"    => 1,
     ],
     [
@@ -36,6 +40,7 @@ return [
         "slug"         => "okolo",
         "category"     => "Спонсоры",
         "link"         => "http://okolo.me/",
+        "meta"         => ['width' => '88', 'height' => '47'],
         "published"    => 1,
     ],
     [
@@ -43,6 +48,7 @@ return [
         "slug"         => "avimedia",
         "category"     => "Спонсоры",
         "link"         => "http://avi-media.ru/",
+        "meta"         => ['width' => '78', 'height' => '42'],
         "published"    => 1,
     ],
     [
@@ -50,6 +56,7 @@ return [
         "slug"         => "okinform",
         "category"     => "Спонсоры",
         "link"         => "http://ok-inform.ru/",
+        "meta"         => ['width' => '116', 'height' => '29'],
         "published"    => 1,
     ],
     [
@@ -57,6 +64,7 @@ return [
         "slug"         => "kronnews",
         "category"     => "Спонсоры",
         "link"         => "http://kronnews.ru/",
+        "meta"         => ['width' => '87', 'height' => '44'],
         "published"    => 1,
     ],
     [
@@ -64,6 +72,7 @@ return [
         "slug"         => "kudago",
         "category"     => "Спонсоры",
         "link"         => "http://kudago.com/",
+        "meta"         => ['width' => '128', 'height' => '56'],
         "published"    => 1,
     ],
     [
@@ -71,6 +80,7 @@ return [
         "slug"         => "teledom",
         "category"     => "Спонсоры",
         "link"         => "http://teledom.tv/",
+        "meta"         => ['width' => '122', 'height' => '26'],
         "published"    => 1,
     ],
     [
@@ -78,6 +88,7 @@ return [
         "slug"         => "panorama",
         "category"     => "Спонсоры",
         "link"         => "http://panorama-tv.ru/",
+        "meta"         => ['width' => '', 'height' => ''],
         "published"    => 0,
     ],
     [
@@ -85,6 +96,7 @@ return [
         "slug"         => "piterstory",
         "category"     => "Спонсоры",
         "link"         => "http://piterstory.com/",
+        "meta"         => ['width' => '', 'height' => ''],
         "published"    => 0,
     ],
 
@@ -95,6 +107,7 @@ return [
         "slug"         => "muzbilet",
         "category"     => "Партнеры",
         "link"         => "http://muzbilet.ru/",
+        "meta"         => ['width' => '135', 'height' => '42'],
         "published"    => 1,
     ],
     [
@@ -102,6 +115,7 @@ return [
         "slug"         => "subkultura",
         "category"     => "Партнеры",
         "link"         => "http://sub-cult.ru/",
+        "meta"         => ['width' => '125', 'height' => '37'],
         "published"    => 1,
     ],
     [
@@ -109,6 +123,7 @@ return [
         "slug"         => "kassir",
         "category"     => "Партнеры",
         "link"         => "https://www.kassir.ru/",
+        "meta"         => ['width' => '125', 'height' => '49'],
         "published"    => 1,
     ],
     [
@@ -116,6 +131,7 @@ return [
         "slug"         => "bileter",
         "category"     => "Партнеры",
         "link"         => "http://www.bileter.ru/",
+        "meta"         => ['width' => '150', 'height' => '39'],
         "published"    => 1,
     ],
     [
@@ -123,6 +139,7 @@ return [
         "slug"         => "biletsofit",
         "category"     => "Партнеры",
         "link"         => "http://www.biletsofit.ru/",
+        "meta"         => ['width' => '156', 'height' => '47'],
         "published"    => 1,
     ],
     [
@@ -130,6 +147,7 @@ return [
         "slug"         => "oyster",
         "category"     => "Партнеры",
         "link"         => "http://www.oyster-telecom.ru/",
+        "meta"         => ['width' => '175', 'height' => '70'],
         "published"    => 1,
     ],
     [
@@ -137,6 +155,7 @@ return [
         "slug"         => "bukvoed",
         "category"     => "Партнеры",
         "link"         => "http://www.bookvoed.ru/",
+        "meta"         => ['width' => '138', 'height' => '43'],
         "published"    => 1,
     ],
 

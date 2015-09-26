@@ -16,7 +16,9 @@ class SeedPartnersTable extends Seeder
         $data = require_once 'partners.php';
 
         $path = "./storage/app/partners";
-        $fileData = $this->fillArrayWithFileNodes( new \DirectoryIterator( $path ), ["jpg", "png"] );
+        $fileData = $this->fillArrayWithFileNodes( new \DirectoryIterator( $path ), ["jpg", "png", "svg"] );
+
+        // print_r($fileData);
 
         foreach ($data as $key => $model) {
 
@@ -98,7 +100,7 @@ class SeedPartnersTable extends Seeder
 
     }
 
-    private function fillArrayWithFileNodes( \DirectoryIterator $dir, $ext = ["jpg", "png"] )
+    private function fillArrayWithFileNodes( \DirectoryIterator $dir, $ext = ["jpg", "png", "svg"] )
     {
         $data = array();
         foreach ( $dir as $node )
