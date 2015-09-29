@@ -1,10 +1,8 @@
 <?php namespace Abnmt\TheaterPartners\Components;
 
-use Cms\Classes\ComponentBase;
-use Abnmt\TheaterPartners\Models\Partner as PartnerModel;
 use Abnmt\TheaterPartners\Models\Category as CategoryModel;
-
-use CW;
+use Abnmt\TheaterPartners\Models\Partner as PartnerModel;
+use Cms\Classes\ComponentBase;
 
 class Partners extends ComponentBase
 {
@@ -13,7 +11,7 @@ class Partners extends ComponentBase
     {
         return [
             'name'        => 'abnmt.theaterpartners::lang.components.partners.name',
-            'description' => 'abnmt.theaterpartners::lang.components.partners.description'
+            'description' => 'abnmt.theaterpartners::lang.components.partners.description',
         ];
     }
 
@@ -33,7 +31,6 @@ class Partners extends ComponentBase
         return CategoryModel::orderBy('name')->lists('name', 'slug');
     }
 
-
     /**
      * A collection of partners to display
      * @var Collection
@@ -44,8 +41,6 @@ class Partners extends ComponentBase
      * @var Model
      */
     public $category;
-
-
 
     public function onRun()
     {
@@ -65,13 +60,12 @@ class Partners extends ComponentBase
         if (!is_null($category)) {
             $partners = PartnerModel::getCategory($category);
 
-            CW::info(['Partners' => $partners]);
+            // CW::info(['Partners' => $partners]);
 
             return $partners;
         } else {
             return null;
         }
     }
-
 
 }
