@@ -1,11 +1,8 @@
 <?php namespace Abnmt\TheaterPartners\Updates;
 
-use System\Models\File as File;
-
-use Abnmt\TheaterPartners\Models\Partner;
 use Abnmt\TheaterPartners\Models\Category;
-
 use October\Rain\Database\Updates\Seeder;
+use System\Models\File as File;
 
 class SeedPartnersTable extends Seeder
 {
@@ -15,15 +12,15 @@ class SeedPartnersTable extends Seeder
 
         $data = require_once 'partners.php';
 
-        $path = "./storage/app/partners";
-        $fileData = $this->fillArrayWithFileNodes( new \DirectoryIterator( $path ), ["jpg", "png", "svg"] );
+        $path     = "./storage/app/media/partners";
+        $fileData = $this->fillArrayWithFileNodes(new \DirectoryIterator($path), ["jpg", "png", "svg"]);
 
         // print_r($fileData);
 
         foreach ($data as $key => $model) {
 
             if (array_key_exists('category', $model)) {
-                $category = $model['category'];
+                $category  = $model['category'];
                 $_category = Category::where('name', '=', $category)->first();
                 if (is_null($_category)) {
                     $_category = Category::create(['name' => $category]);
@@ -31,7 +28,7 @@ class SeedPartnersTable extends Seeder
                 $model['category'] = $_category;
             }
 
-            $model = $this->createModel( 'Abnmt\TheaterPartners\Models\Partner', $model);
+            $model = $this->createModel('Abnmt\TheaterPartners\Models\Partner', $model);
 
             $this->assignImages($model, $fileData);
 
@@ -46,29 +43,26 @@ class SeedPartnersTable extends Seeder
         return $model;
     }
 
-
     private function assignImages($model, $fileData)
     {
 
-        if ( array_key_exists($model->slug, $fileData) ) {
+        if (array_key_exists($model->slug, $fileData)) {
 
             $images = $fileData[$model->slug];
 
             echo $model->slug . " [";
 
-            foreach ($images as $key => $filePath)
-            {
+            foreach ($images as $key => $filePath) {
 
-                if ( !is_array($filePath) )
-                {
+                if (!is_array($filePath)) {
                     $pathinfo = pathinfo($filePath);
-                    $check = File::where('attachment_id', '=', $model->id)
+                    $check    = File::where('attachment_id', '=', $model->id)
                         ->where('attachment_type', '=', get_class($model))
                         ->where('file_name', '=', $pathinfo['basename'])
                         // ->where('field', '=', $pathinfo['filename'])
                         ->first();
 
-                    if ( !is_null($check) ) {
+                    if (!is_null($check)) {
                         if (filemtime($filePath) > $check->updated_at->timestamp) {
                             echo "^";
                             $check->delete();
@@ -100,17 +94,13 @@ class SeedPartnersTable extends Seeder
 
     }
 
-    private function fillArrayWithFileNodes( \DirectoryIterator $dir, $ext = ["jpg", "png", "svg"] )
+    private function fillArrayWithFileNodes(\DirectoryIterator $dir, $ext = ["jpg", "png", "svg"])
     {
         $data = array();
-        foreach ( $dir as $node )
-        {
-            if ( $node->isDir() && !$node->isDot() )
-            {
-                $data[$node->getFilename()] = self::fillArrayWithFileNodes( new \DirectoryIterator( $node->getPathname() ) );
-            }
-            elseif ( $node->isFile() && in_array($node->getExtension(), $ext) )
-            {
+        foreach ($dir as $node) {
+            if ($node->isDir() && !$node->isDot()) {
+                $data[$node->getFilename()] = self::fillArrayWithFileNodes(new \DirectoryIterator($node->getPathname()));
+            } elseif ($node->isFile() && in_array($node->getExtension(), $ext)) {
                 $data[$node->getBasename('.' . $node->getExtension())] = $node->getPathname();
             }
         }
