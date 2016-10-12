@@ -26,6 +26,15 @@ return [
         'cover' => 'abnmt.theaterpartners::lang.partner.cover',
         'logo_color' => 'abnmt.theaterpartners::lang.partner.logo_color',
         'logo_bw' => 'abnmt.theaterpartners::lang.partner.logo_bw',
+        'link' => 'abnmt.theaterpartners::lang.partner.link',
+        'link_placeholder' => 'abnmt.theaterpartners::lang.partner.link_placeholder',
+        'meta_width' => 'abnmt.theaterpartners::lang.partner.meta_width',
+        'meta_width_placeholder' => 'abnmt.theaterpartners::lang.partner.meta_width_placeholder',
+        'meta_height' => 'abnmt.theaterpartners::lang.partner.meta_height',
+        'meta_height_placeholder' => 'abnmt.theaterpartners::lang.partner.meta_height_placeholder',
+        'published' => 'abnmt.theaterpartners::lang.partner.published',
+        'description' => 'abnmt.theaterpartners::lang.partner.description',
+        'description_placeholder' => 'abnmt.theaterpartners::lang.partner.description_placeholder',
     ],
     'partners' => [
         'menu_label' => 'Partners',
@@ -60,5 +69,7 @@ return [
         'title' => 'abnmt.theaterpartners::lang.post.title',
         'category' => 'abnmt.theaterpartners::lang.post.category',
         'published' => 'abnmt.theaterpartners::lang.post.published',
+        'category_comment' => 'abnmt.theaterpartners::lang.post.category_comment',
+        'category_placeholder' => 'abnmt.theaterpartners::lang.post.category_placeholder',
     ],
 ];

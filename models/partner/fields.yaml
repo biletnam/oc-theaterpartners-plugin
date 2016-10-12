@@ -15,15 +15,25 @@ fields:
             field: title
             type: slug
 
+    published:
+        label: abnmt.theaterpartners::lang.partner.published
+        type: switch
+        default: false
+
+    meta[description]:
+        label: abnmt.theaterpartners::lang.partner.description
+        placeholder: abnmt.theaterpartners::lang.partner.description_placeholder
 
     link:
         label: abnmt.theaterpartners::lang.partner.link
         placeholder: abnmt.theaterpartners::lang.partner.link_placeholder
+        span: left
 
     category:
         type: relation
         commentAbove: abnmt.theaterpartners::lang.post.category_comment
         placeholder: abnmt.theaterpartners::lang.post.category_placeholder
+        span: right
 
     cover:
         tab: abnmt.theaterpartners::lang.partner.tab_manage
