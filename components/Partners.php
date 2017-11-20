@@ -60,8 +60,6 @@ class Partners extends ComponentBase
         if (!is_null($category)) {
             $partners = PartnerModel::getCategory($category);
 
-            // CW::info(['Partners' => $partners]);
-
             return $partners;
         } else {
             return null;
