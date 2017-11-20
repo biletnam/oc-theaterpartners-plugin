@@ -2,8 +2,6 @@
 
 use System\Classes\PluginBase;
 
-
-use Illuminate\Foundation\AliasLoader;
 /**
  * TheaterPartners Plugin Information File
  */
@@ -21,7 +19,7 @@ class Plugin extends PluginBase
             'name'        => 'abnmt.theaterpartners::lang.plugin.name',
             'description' => 'abnmt.theaterpartners::lang.plugin.description',
             'author'      => 'Abnmt',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-leaf',
         ];
     }
 
@@ -29,12 +27,12 @@ class Plugin extends PluginBase
     {
         return [
             'theaterpartners' => [
-                'label' => 'Партнеры',
-                'url' => \Backend::url('abnmt/theaterpartners/partners'),
-                'icon' => 'icon-pencil',
-                'order' => 600,
+                'label'    => 'Партнеры',
+                'url'      => \Backend::url('abnmt/theaterpartners/partners'),
+                'icon'     => 'icon-pencil',
+                'order'    => 600,
                 'sideMenu' => [
-                    'partners' => [
+                    'partners'   => [
                         'label' => 'Партнеры',
                         'icon'  => 'icon-pencil',
                         'url'   => \Backend::url('abnmt/theaterpartners/partners'),
@@ -62,7 +60,5 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        $alias = AliasLoader::getInstance();
-        $alias->alias( 'CW', '\Clockwork\Support\Laravel\Facade' );
     }
 }
